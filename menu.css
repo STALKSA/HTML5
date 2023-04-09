@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  overflow-y: auto;
+
+}
+
+a {
+  text-decoration: none;
+  padding-left: 5px;
+  color: white;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.menu {
+  background-color: #808080;
+  width: 150px;
+  height: auto;
+  transition: width 1s ease-in-out;
+
+}
+
+li {
+  color: white;
+}
+
+img {
+  width: 20px;
+  height: 20px;
+}
+
+.menu:hover {
+  width: 200px;
+
+
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.menu li {
+/*  border-bottom: 1px solid #ccc;*/
+  padding: 10px;
+
+}
+
+.menu li:hover {
+ background-color: #696969;
+}
+
+.content {
+  flex: 1;
+  padding-left: 180px;
+}
+
+/* Прибивание меню при прокрутке страницы */
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Прибивание первого столбца таблицы при прокрутке таблицы */
+.content table {
+  table-layout: fixed;
+}
+
+.content td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
